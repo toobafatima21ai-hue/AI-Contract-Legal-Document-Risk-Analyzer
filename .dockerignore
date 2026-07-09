@@ -1,0 +1,29 @@
+# Virtual environments
+backend/.venv/
+frontend/.venv/
+**/.venv/
+**/venv/
+
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+
+# Databases
+**/*.db
+**/*.sqlite3
+
+# User uploaded files
+backend/uploads/*
+backend/reports/*
+backend/chroma_store/*
+
+# Secrets — never send to Docker
+**/.env
+
+# Git history
+.git/
+
+# OS
+.DS_Store
+Thumbs.db

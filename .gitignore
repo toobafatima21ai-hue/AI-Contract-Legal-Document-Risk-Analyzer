@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# Databases
+*.db
+
+# Environment secrets
+.env
+
+# Uploads
+backend/uploads/
+
+# Reports
+backend/reports/
+
+# ChromaDB
+backend/chroma_store/
+
+# OS files
+.DS_Store
+Thumbs.db
