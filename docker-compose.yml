@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL}
+
+  frontend:
+    build:
+      context: ./frontend
+
+    ports:
+      - "8501:8501"
+
+    environment:
+      - API_BASE_URL=http://backend:8000
+
+    depends_on:
+      - backend
