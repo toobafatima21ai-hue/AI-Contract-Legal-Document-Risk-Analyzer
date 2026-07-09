@@ -6,8 +6,8 @@ All requests are wrapped in _safe() so ConnectionError never crashes Streamlit.
 import requests
 import streamlit as st
 
-BASE = "http://localhost:8000/api"
-
+import os
+BASE = os.getenv("BACKEND_URL", "http://localhost:8000") + "/api"
 # Timeout constants (seconds)
 T_FAST   = 30    # simple DB reads
 T_UPLOAD = 60    # file upload + text extraction
